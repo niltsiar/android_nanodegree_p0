@@ -17,7 +17,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:text="@string/header_tv" />
+    android:text="@string/header_tv"
+    android:textSize="@dimen/header_tv_size"/>
 
   <Button
     android:id="@+id/popular_movies"

@@ -7,6 +7,12 @@
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:buttonStyle">@style/MyAppPortfolio.Button</item>
+  </style>
+
+  <style name="MyAppPortfolio.Button" parent="Base.Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/button_text</item>
+    <item name="android:background">@drawable/button_background</item>
   </style>
 
 </resources>
