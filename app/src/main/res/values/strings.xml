@@ -7,4 +7,5 @@
   <string name="make_your_app_material_btn">Make your app material</string>
   <string name="go_ubiquitous_btn">Go ubiquitous</string>
   <string name="capstone_btn">Capstone</string>
+  <string name="toast_message">This button will launch my %s app!</string>
 </resources>
