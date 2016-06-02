@@ -1,14 +1,15 @@
 buildscript {
     ext.versions = [
-            kotlin_version: '1.0.2',
-            support: '23.4.0',
-            junit: '4.12',
+            support    : '23.4.0',
+            junit      : '4.12',
+            apt        : '1.8',
+            butterknife: '8.0.1',
     ]
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin_version}"
+        classpath "com.neenbedankt.gradle.plugins:android-apt:${versions.apt}"
     }
 }
 repositories {
@@ -16,8 +17,7 @@ repositories {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 23
@@ -45,10 +45,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile "com.android.support:appcompat-v7:${versions.support}"
-    compile "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin_version}"
-    compile 'com.jakewharton:butterknife:8.0.1'
+    compile "com.jakewharton:butterknife:${versions.butterknife}"
 
-    kapt 'com.jakewharton:butterknife-compiler:8.0.1'
+    apt "com.jakewharton:butterknife-compiler:${versions.butterknife}"
 
     testCompile "junit:junit:${versions.junit}"
 }
